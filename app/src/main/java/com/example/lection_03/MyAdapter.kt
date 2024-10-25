@@ -26,13 +26,15 @@ class MyAdapter() : RecyclerView.Adapter<MyViewHolder>() {
     fun setItems(list : List<Int>){
         items.clear()
         items.addAll(list)
-        notifyDataSetChanged()
+        notifyItemRangeInserted(items.size,list.size)
+        //notifyDataSetChanged()
     }
 
     @SuppressLint("NotifyDataSetChanged")
     fun addItems(int: Int){
         items.add(int)
-        notifyDataSetChanged()
+        notifyItemRangeInserted(items.size,1)
+        //notifyDataSetChanged()
     }
 
 }
