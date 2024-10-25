@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 class MyAdapter() : RecyclerView.Adapter<MyViewHolder>() {
-    private val items = ArrayList<Int>();
+    private val items = ArrayList<Int>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         return MyViewHolder(

@@ -1,7 +1,6 @@
 package com.example.lection_03
 
 import android.annotation.SuppressLint
-import android.graphics.Color
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
