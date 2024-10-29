@@ -11,7 +11,7 @@ class MyActivity : AppCompatActivity() {
     lateinit var recyclerView: RecyclerView
     lateinit var button: Button
 
-    private val adapter = MyAdapter()
+    private val adapter = MyAdapter(this)
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +28,8 @@ class MyActivity : AppCompatActivity() {
 
             adapter.addItems(adapter.itemCount + 1)
         }
+
+
         if(savedInstanceState != null){
             itemCount = savedInstanceState.getInt("itemCount",0)
             val items = ArrayList<Int>()
