@@ -1,6 +1,5 @@
 package com.example.lection_03
 
-import android.annotation.SuppressLint
 import android.graphics.Color
 
 import android.view.View
@@ -13,7 +12,7 @@ class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     val image = view.findViewById<ImageView>(R.id.image_view)
 
-    @SuppressLint("ResourceAsColor")
+
     fun bind(number: Int){
         text.text = "$number"
         if(number % 2 == 0){

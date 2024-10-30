@@ -31,7 +31,7 @@ class MyActivity : AppCompatActivity() {
 
 
         if(savedInstanceState != null){
-            itemCount = savedInstanceState.getInt("itemCount",0)
+            itemCount = savedInstanceState.getInt(ITEM_COUNT_KEY,0)
             val items = ArrayList<Int>()
             for (i in 1..itemCount) {
                 items.add(i)
@@ -47,7 +47,7 @@ class MyActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putInt("itemCount", adapter.itemCount)
+        outState.putInt(ITEM_COUNT_KEY, adapter.itemCount)
     }
 
 

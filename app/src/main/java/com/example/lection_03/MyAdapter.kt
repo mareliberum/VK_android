@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 class MyAdapter(private val context: Context) : RecyclerView.Adapter<MyViewHolder>() {
+
     private val items = ArrayList<Int>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -27,7 +28,7 @@ class MyAdapter(private val context: Context) : RecyclerView.Adapter<MyViewHolde
 
         holder.image.setOnClickListener {
             val intent = Intent(context, Class2::class.java).apply {
-                putExtra("image_text", items[position].toString())
+                putExtra(IMAGE_KEY, items[position].toString())
             }
             context.startActivity(intent)
         }
@@ -39,13 +40,12 @@ class MyAdapter(private val context: Context) : RecyclerView.Adapter<MyViewHolde
         items.clear()
         items.addAll(list)
         notifyItemRangeInserted(items.size,list.size)
-        //notifyDataSetChanged()
+
     }
 
     fun addItems(int: Int){
         items.add(int)
         notifyItemRangeInserted(items.size,1)
-        //notifyDataSetChanged()
     }
 
 }

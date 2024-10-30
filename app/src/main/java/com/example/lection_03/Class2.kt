@@ -14,7 +14,7 @@ class Class2 : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.class2)
         val text = findViewById<TextView>(R.id.text_2)
-        val imageText = intent.getStringExtra("image_text")
+        val imageText = intent.getStringExtra(IMAGE_KEY)
 
         text.text = imageText
         val color = findViewById<ConstraintLayout>(R.id.class2)
